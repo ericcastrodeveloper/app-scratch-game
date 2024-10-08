@@ -21,7 +21,7 @@ public class GameRewardTest {
     @BeforeEach
     public void init() {
         AppConfiguration appConfiguration = new AppConfiguration();
-        GameConfiguration gameConfiguration = appConfiguration.loadConfiguration("config.json");
+        GameConfiguration gameConfiguration = appConfiguration.loadConfiguration("config-test.json");
         SymbolUtils symbolUtils = new SymbolUtils(gameConfiguration.symbols());
         gameReward = new GameReward(gameConfiguration, symbolUtils);
     }

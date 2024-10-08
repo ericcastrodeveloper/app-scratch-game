@@ -25,7 +25,7 @@ public class GameValidatorTest {
     @BeforeEach
     public void init() {
         appConfiguration = new AppConfiguration();
-        gameConfiguration = appConfiguration.loadConfiguration("config.json");
+        gameConfiguration = appConfiguration.loadConfiguration("config-test.json");
         gameValidator = new GameValidator(gameConfiguration, new SymbolUtils(gameConfiguration.symbols()));
     }
 
