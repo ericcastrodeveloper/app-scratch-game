@@ -15,42 +15,37 @@ public class BonusHandlerTest {
     @BeforeEach
     public void init() {
         AppConfiguration appConfiguration = new AppConfiguration();
-        GameConfiguration gameConfiguration = appConfiguration.loadConfiguration("config.json");
+        GameConfiguration gameConfiguration = appConfiguration.loadConfiguration("config-test.json");
         bonusHandler = new BonusHandler(gameConfiguration);
     }
 
     @Test
-    public void test1() {
+    public void testApplyTenTimesBonus() {
         double reward = bonusHandler.applyBonus(100.00, "10x");
-
         assertEquals(reward, 1000.00);
     }
 
     @Test
-    public void test2() {
+    public void testApplyFiveTimesBonus() {
         double reward = bonusHandler.applyBonus(100.00, "5x");
-
         assertEquals(reward, 500.00);
     }
 
     @Test
-    public void test3() {
+    public void testApplyBonusOfPlus1000() {
         double reward = bonusHandler.applyBonus(100.00, "+1000");
-
         assertEquals(reward, 1100.00);
     }
 
     @Test
-    public void test4() {
+    public void testApplyBonusOfPlus500() {
         double reward = bonusHandler.applyBonus(100.00, "+500");
-
         assertEquals(reward, 600.00);
     }
 
     @Test
-    public void test5() {
+    public void testApplyMissedBonus() {
         double reward = bonusHandler.applyBonus(100.00, "MISS");
-
         assertEquals(reward, 100.00);
     }
 }

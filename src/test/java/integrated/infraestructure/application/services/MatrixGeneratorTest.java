@@ -26,7 +26,7 @@ public class MatrixGeneratorTest {
     @BeforeEach
     public void init() {
         appConfiguration = new AppConfiguration();
-        gameConfiguration = appConfiguration.loadConfiguration("config-test.json");
+        gameConfiguration = appConfiguration.loadConfiguration("config-test-matrix.json");
         probabilityBonusService = new ProbabilityBonusService(gameConfiguration.probabilities().bonusSymbolProbabilities());
         probabilityStandardService = new ProbabilityStandardService(gameConfiguration.probabilities().standardSymbolProbabilities());
         probabilityAggregator = new ProbabilityAggregator(probabilityStandardService, probabilityBonusService);

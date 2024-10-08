@@ -186,7 +186,7 @@
       "group": "same_symbols"
     },
     "same_symbol_5_times": {
-      "reward_multiplier": 2,
+      "reward_multiplier": 5,
       "when": "same_symbols",
       "count": 5,
       "group": "same_symbols"
